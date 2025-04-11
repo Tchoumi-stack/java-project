@@ -32,7 +32,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('sonar') {
-                    sh '${SCANNER_HOME}/bin/sonar-scanner -Dsonar.projectKey=java-app -Dsonar.sources=src -Dsonar.java.binaries=target' 
+                    sh '${SCANNER_HOME}/bin/sonar-scanner -Dsonar.projectKey=java-project -Dsonar.sources=src -Dsonar.java.binaries=target' 
                 }
             }
         }
