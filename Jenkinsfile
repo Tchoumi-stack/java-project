@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Git checkout') {
             steps {
-                git credentialsId: 'git-cred', url: 'https://github.com/Tchoumi-stack/java-project.git'
+               git branch: 'main', credentialsId: 'git-cred', url: 'https://github.com/Tchoumi-stack/java-project.git' 
             }
         }
         stage('Compile') {
